@@ -1,0 +1,28 @@
+import { useState } from "react";
+import { TodoDispatchContext, useTodoDispatch } from "../App";
+import "./Editor.css";
+
+interface Props {}
+
+export default function Editor(props: Props) {
+  const dispatch = useTodoDispatch();
+
+  const [text, setText] = useState("");
+
+  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
+  };
+
+  const onClickButton = () => {
+    dispatch.onClickAdd(text);
+    setText("");
+  };
+
+  return (
+    <div className="editor">
+      {" "}
+      <input value={text} onChange={onChangeInput} />
+      <button onClick={onClickButton}>추가</button>
+    </div>
+  );
+}

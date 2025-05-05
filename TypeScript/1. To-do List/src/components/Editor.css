@@ -1,0 +1,28 @@
+.editor {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.editor input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.editor button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.editor button:hover {
+  background-color: #45a049;
+}
