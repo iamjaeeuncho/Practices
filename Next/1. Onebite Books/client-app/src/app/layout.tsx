@@ -11,7 +11,7 @@ async function Footer() {
   );
 
   if (!response.ok) {
-    return <footer>제작 @winterlood</footer>;
+    return <footer>제작 @iamjaeeuncho</footer>;
   }
 
   const books: BookData[] = await response.json();
@@ -19,7 +19,7 @@ async function Footer() {
 
   return (
     <footer>
-      <div>제작 @winterlood</div>
+      <div>제작 @iamjaeeuncho</div>
       <div>{bookCount}개의 도서가 등록되어있습니다</div>
     </footer>
   );
